@@ -1,7 +1,7 @@
 "use client"
 import MapBanner from '../../component/MapBanner'
 import Contactmain from '../../component/Contactmain'
-import Footer from '@/component/Footer'
+
 
 export default function Contact(){
     return(
