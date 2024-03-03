@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 const HomeBackground = () => {
   return (
     <div className="h-full md:h-full sm:h-full  flex flex-col lg:flex-row md:flex-col sm:flex-col items-center justify-center   ">
-      <div className="lg:text-left m-16 ">
+      <div className="lg:text-left m-8 ">
         <p className="font-bold text-blue-600  ">
           Rpl Certfication in australia
         </p>
