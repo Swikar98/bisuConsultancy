@@ -45,9 +45,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="grid lg:gap-36 ml-4 font-semibold grid-cols-1 md:grid-cols-2 border">
-        <div className="lg:m-4">Copyright @ 2024 Bisu Global</div>
-        <div className="lg:m-4">All Right Reserve.</div>
+      <div className="grid lg:gap-36 bg-blue-600 text-white lg:font-semibold md:font-semibold md:text-xl sm:text-sm grid-cols-1 md:grid-cols-2 border">
+        <div className="lg:m-4 text-center">Copyright @ 2024 Bisu Global</div>
+        <div className="lg:m-4 text-center">All Right Reserve.</div>
       </div>
     </>
   );
