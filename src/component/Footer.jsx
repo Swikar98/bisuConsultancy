@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Logo from "../image/logo.png";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -17,10 +18,10 @@ const Footer = () => {
             similique minima.
           </p>
           <div className="mt-4 mb-4 text-blue-600 flex gap-4">
-            <FaFacebook size={20} />
-            <FaInstagram size={20} />
-            <FaLinkedin size={20} />
-            <FaTwitter size={20} />
+          <Link href="https://www.facebook.com/"> <FaFacebook size={25}/></Link>
+          <Link href="https://www.instagram.com/"> <FaInstagram size={25}/></Link>
+          <Link href="https://www.linkedin.com/">  <FaLinkedin size={25}/></Link>
+          <Link href="https://www.twiter.com/">  <FaTwitter size={25}/></Link>
           </div>
         </div>
         <div className="grid grid-cols-2  p-4">
