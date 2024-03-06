@@ -22,7 +22,7 @@ const HomeBackground = () => {
   
   return (
     <div className="h-full md:h-full sm:h-full  flex flex-col lg:flex-row md:flex-col sm:flex-col items-center justify-center  ">
-      <div className="lg:text-left mt-8 lg:ml-16 md:ml-8 md:mr-8 sm:ml-8 sm:mr-8 " style={fadeInLeft}>
+      <div className="lg:text-left mt-8 lg:ml-16 m-8 " style={fadeInLeft}>
         <p className="font-bold text-blue-600  ">
           Rpl Certfication in australia
         </p>
