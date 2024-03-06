@@ -22,7 +22,7 @@ const HomeBackground = () => {
   
   return (
     <div className="h-full md:h-full sm:h-full  flex flex-col lg:flex-row md:flex-col sm:flex-col items-center justify-center  ">
-      <div className="lg:text-left m-8 w-1/2 " style={fadeInLeft}>
+      <div className="lg:text-left mt-8 w-1/2 " style={fadeInLeft}>
         <p className="font-bold text-blue-600  ">
           Rpl Certfication in australia
         </p>
@@ -34,10 +34,12 @@ const HomeBackground = () => {
           permanent residence application
         </p>
         <div className="flex flex-col lg:flex-row md:flex-col  sm:flex-col gap-5">
-          <button className="bg-blue-600 border-2 p-2 hover:bg-white hover:text-black hover:border-blue-600 hover:border-2 lg:ml-0 md:bg-blue-600 sm:bg-blue-600 font-bold text-white rounded">
+          <button className="bg-blue-600 border-2 p-2 hover:bg-white hover:text-black
+           hover:border-blue-600 hover:border-2 lg:ml-0 md:bg-blue-600 sm:bg-blue-600 font-bold text-white rounded">
             Contact Us for Visa!
           </button>
-          <button className="lg:border-2 sm:ml-4 sm:mr-4 md:border-2 sm:border-2 bg-white p-2 font-bold rounded hover:bg-blue-600 hover:text-white border-blue-600">
+          <button className="lg:border-2 sm:ml-4 sm:mr-4 md:border-2 sm:border-2
+           bg-white p-2 font-bold rounded hover:bg-blue-600 hover:text-white border-blue-600">
             Book Appointment
           </button>
         </div>
