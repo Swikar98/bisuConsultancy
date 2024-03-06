@@ -22,14 +22,14 @@ const HomeBackground = () => {
   
   return (
     <div className="h-full md:h-full sm:h-full  flex flex-col lg:flex-row md:flex-col sm:flex-col items-center justify-center  ">
-      <div className="lg:text-left mt-8 mr-8 ml-8 lg:w-1/2 " style={fadeInLeft}>
+      <div className="lg:text-left mt-8 lg:ml-16 sm:ml-8 sm:mr-8 " style={fadeInLeft}>
         <p className="font-bold text-blue-600  ">
           Rpl Certfication in australia
         </p>
         <h1 className="text-4xl font-bold mb-2">Are you Facing </h1>
         <p className="text-5xl text-blue-600 font-bold mb-2">No Further Stay</p>
         <p className="font-bold mb-2">Condition on Your current Visa Status</p>
-        <p className="text-gray-800 w-2/3 mb-4">
+        <p className="text-gray-800 w-4/5  mb-4">
           we can solve your visa related issue, whether it's a new  visa or
           permanent residence application
         </p>
@@ -43,7 +43,7 @@ const HomeBackground = () => {
             Book Appointment
           </button>
         </div>
-        <div className="mt-6 mb-4  w-1/2 text-blue-400 flex gap-4 ">
+        <div className="mt-6 mb-4  w-1/3 text-blue-400 flex gap-4 ">
           <Link className=" hover:text-blue-600 border-2 hover:border-2 hover:border-white" href="https://www.facebook.com/"> <FaFacebook size={25}/></Link>
           <Link className=" hover:text-blue-600 border-2 hover:border-2 hover:border-white" href="https://www.instagram.com/"> <FaInstagram size={25}/></Link>
           <Link className=" hover:text-blue-600 border-2 hover:border-2 hover:border-white" href="https://www.linkedin.com/">  <FaLinkedin size={25}/></Link>
@@ -51,7 +51,7 @@ const HomeBackground = () => {
         </div>
       </div>
 
-      <div className="lg:ml-8  md:ml-0  sm:ml-0  items-center"style={fadeInRight}>
+      <div className="lg:ml-8  md:ml-0  sm:ml-0 animate-fade-right  items-center"style={fadeInRight}>
         <Image
           src={first}
           alt="Cover Image"
