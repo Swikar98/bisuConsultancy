@@ -1,45 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { useSpring, animated } from "react-spring";
 import Image from "next/image";
-import first from "../../image/carousel/matting_first.png";
+import first from "../../image/carousel/first.jpg";
 import { FaFacebook, FaInstagram, FaLinkedin, FaTwitter } from "react-icons/fa";
 import Link from "next/link";
 
 const HomeBackground = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  const fadeIn = useSpring({
-    opacity: isLoaded ? 1 : 0,
-    from: { opacity: 0 },
-    onStart: () => {
-      if (!isLoaded) {
-        setIsLoaded(true);
-      }
-    },
-  });
-
-  useEffect(() => {
-    // Simulate loading process (replace with your actual loading logic)
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 400); // Adjust the duration as needed
-  }, []);
-
   return (
-    <div className="h-full md:h-full sm:h-full flex flex-col lg:flex-row md:flex-col sm:flex-col items-center justify-center">
-      <animated.div className={`lg:text-left mt-8 lg:ml-16 m-8`} style={fadeIn}>
-        <p className="font-bold text-blue-600">Rpl Certfication in Australia</p>
-        <h1 className="text-4xl font-bold animate-flip-up mb-2">Are you Facing</h1>
-        <p className="text-5xl text-blue-600 font-bold mb-2">No Further Stay</p>
-        <p className="font-bold mb-2">Condition on Your current Visa Status</p>
+    <div className="h-full md:h-full sm:h-full  lg:mx-16 flex flex-col lg:flex-row md:flex-col sm:flex-col animate-fade animate-once animate-duration-500 animate-delay-500 items-center justify-center">
+      <animated.div className={`lg:text-left mt-16  mx-16 m-8`} >
+        <p className="font-bold text-blue-600 a">Rpl Certfication in Australia</p>
+        <h1 className="text-4xl font-bold  mb-2">Are you Facing</h1>
+        <p className="text-5xl text-blue-600 font-bold animate-typing overflow-hidden whitespace-nowrap mb-2">No Further Stay!</p>
+        <p className="font-bold mb-2 animate-typing overflow-hidden whitespace-nowrap  pr-5 ">Condition on Your current Visa Status</p>
         <p className="text-gray-800 w-4/5 mb-4">
           We can solve your visa-related issue, whether it's a new visa or permanent residence application
         </p>
         <div className="flex flex-col lg:flex-row md:flex-col sm:flex-col gap-5">
-          <button className="bg-blue-600 border-2 p-2 hover:bg-white hover:text-black hover:border-blue-600 hover:border-2 lg:ml-0 md:bg-blue-600 sm:bg-blue-600 font-bold text-white rounded">
+          <button className="bg-blue-600 border-2 p-2 hover:bg-white hover:text-black hover:border-blue-600 hover:border-2
+           lg:ml-0 md:bg-blue-600 sm:bg-blue-600 font-bold text-white rounded">
             Contact Us for Visa!
           </button>
-          <button className="lg:border-2 sm:ml-4 sm:mr-4 md:border-2 sm:border-2 bg-white p-2 font-bold rounded hover:bg-blue-600 hover:text-white border-blue-600">
+          <button className="lg:border-2 sm:ml-4 sm:mr-4 md:border-2 sm:border-2 bg-white p-2 font-bold rounded
+           hover:bg-blue-600 hover:text-white border-blue-600">
             Book Appointment
           </button>
         </div>
@@ -59,13 +42,13 @@ const HomeBackground = () => {
         </div>
       </animated.div>
 
-      <animated.div className={`lg:ml-8 md:ml-0 sm:ml-0 animate-flip-up`} style={fadeIn}>
+      <animated.div className={` m-8  md:ml-0  bg-blue-200 border-white border-4 sm:ml-0 `} >
         <Image
           src={first}
           alt="Cover Image"
-          width={550}
+          width={500}
           height={550}
-          className="rounded"
+          className="rounded rotate-3 hover:rotate-0 ease-in-out"
         />
       </animated.div>
     </div>

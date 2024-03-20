@@ -13,11 +13,34 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
-      fontFamily:{
-        sans:['Inter',...defaultTheme.fontFamily.sans],
+      keyframes: {
+        typing: {
+          "0%": {
+            width: "0%",
+            visibility: "hidden"
+          },
+          "100%": {
+            width: "100%"
+          }  
+        },
+        blink: {
+          "50%": {
+            borderColor: "transparent"
+          },
+          "100%": {
+            borderColor: "white"
+          }  
+        }
+      },
+      animation: {
+        typing: "typing 2s  alternate, blink .7s infinite"
       }
+     
     },
   },
   plugins: [],
 });
+// fontFamily:{
+//   sans:['Inter',...defaultTheme.fontFamily.sans],
+// }
 
