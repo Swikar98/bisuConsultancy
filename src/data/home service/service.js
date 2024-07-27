@@ -43,24 +43,24 @@ const servicesData = [
     bgColor: "bg-gray-100",
     hoverColor: "hover:bg-gray-300",
   },
-  {
-    id: 5,
-    icon: <AiFillSafetyCertificate className="text-red-600 text-4xl block mx-auto" />,
-    title: "Migration Skill Assessment",
-    description: "When you study in Canada, you can take advantage of a reasonable cost structure and high-quality instruction.",
-    buttonText: "Read more",
-    bgColor: "bg-gray-100",
-    hoverColor: "hover:bg-gray-300",
-  },
-  {
-    id: 6,
-    icon: <FaUniversity className="text-blue-600 text-4xl block mx-auto" />,
-    title: "University",
-    description: "When you study in Canada, you can take advantage of a reasonable cost structure and high-quality instruction.",
-    buttonText: "Read more",
-    bgColor: "bg-gray-100",
-    hoverColor: "hover:bg-gray-300",
-  },
+  // {
+  //   id: 5,
+  //   icon: <AiFillSafetyCertificate className="text-red-600 text-4xl block mx-auto" />,
+  //   title: "Migration Skill Assessment",
+  //   description: "When you study in Canada, you can take advantage of a reasonable cost structure and high-quality instruction.",
+  //   buttonText: "Read more",
+  //   bgColor: "bg-gray-100",
+  //   hoverColor: "hover:bg-gray-300",
+  // },
+  // {
+  //   id: 6,
+  //   icon: <FaUniversity className="text-blue-600 text-4xl block mx-auto" />,
+  //   title: "University",
+  //   description: "When you study in Canada, you can take advantage of a reasonable cost structure and high-quality instruction.",
+  //   buttonText: "Read more",
+  //   bgColor: "bg-gray-100",
+  //   hoverColor: "hover:bg-gray-300",
+  // },
 ];
 
 export default servicesData;

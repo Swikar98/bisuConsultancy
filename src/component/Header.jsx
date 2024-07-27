@@ -40,19 +40,19 @@ const Header = () => {
   }, []);
   return (
     <header
-      className={`w-full sticky  top-0 z-50 bg-white  ${
+      className={`w-full sticky  top-0 z-50 lg:bg-gray-300 bg-white  ${
         isScrolled && "shadow-xl "
       }`}
     >
-      <nav className="underline-offset-auto  ">
+      <nav className="underline-offset-auto   ">
         <Container className="  flex justify-between py-2  pr-10  bg-transparent">
           {/* Logo */}
-          <div className="relative z-10 flex item-center  " >
+          <div className="relative z-10 flex items -center  " >
             <Logo />
           </div>
           {/* NavLinks */}
-          <div className="hidden lg:flex lg:gap-8 items-center">
-            <NavLinks />
+          <div className="hidden lg:flex  bg-gradient-to-r from-teal-300 via-green-300 to-blue-300 justify-center lg:mt-5 lg:h-14 px-4 rounded-lg lg:gap-6 items-center">
+            <NavLinks className=" text-teal-700" />
           </div>
           {/* Buttons */}
           <div className="flex items-center gap-6">

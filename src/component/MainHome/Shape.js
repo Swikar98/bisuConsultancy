@@ -5,7 +5,7 @@ import { PiCertificate } from "react-icons/pi";
 const Shape = () => {
   return (
     <div className="container mx-auto ">
-      <section className=" mt-8 p-6 rounded-xl bg-white">
+      <section className=" mt-8 p-6 rounded-xl">
         <div className="text-center mb-6">
           <SectionHead
             subHeader="Do You Want To Complete Your Degree Fast Through the RPL"

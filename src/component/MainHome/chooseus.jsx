@@ -4,7 +4,7 @@ import Gesture from "../../image/matting_gesture.png";
 
 const ChooseUs = () => {
   return (
-    <div className="container mx-auto mt-4 bg-white rounded-lg p-4 flex flex-col lg:flex-row items-center lg:items-start justify-around">
+    <div className="container mx-auto mt-4 rounded-lg p-4 flex flex-col lg:flex-row items-center lg:items-start justify-around">
       <div className="lg:w-1/2 mb-4 lg:mb-0 flex justify-center">
         <Image
           src={Gesture}

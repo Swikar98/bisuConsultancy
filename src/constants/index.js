@@ -14,7 +14,7 @@ export const navData = [
   { _id: 103, title: "EVENT", href: "event" },
   { _id: 104, title: "SERVICES", href: "service" },
   { 
-    _id: 104, 
+    _id: 105, 
     title: "VISA", 
     href: "visa",
     // subItems: [
@@ -23,5 +23,5 @@ export const navData = [
      
     // ]
   },
-  { _id: 105, title: "CONTACT", href: "contact" },
+  { _id: 106, title: "CONTACT", href: "contact" },
 ];
