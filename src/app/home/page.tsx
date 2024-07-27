@@ -11,7 +11,7 @@ export default function Home() {
       <HomeBackground  /> 
       <Shape/>
       <Choose/>
-      <Text />
+      {/* <Text /> */}
       <ServicesMenu/>
     </>
   );
