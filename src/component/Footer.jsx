@@ -22,7 +22,7 @@ const Footer = () => {
                 <h2 className="text-teal-700 mt-4 font-bold text-lg">QUICK LINKS</h2>
                 <ul className="mt-2 space-y-2">
                   <li>
-                    <a href="http://localhost:3000/aboutus" className="relative group text-gray-700">
+                    <a href="https://bisu-consultancy.vercel.app/aboutus" className="relative group text-gray-700">
                       About Us
                       <span className="absolute block w-full h-1 bg-teal-600 bottom-0 left-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
                     </a>
