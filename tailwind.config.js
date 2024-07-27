@@ -38,7 +38,9 @@ module.exports = withMT({
      
     },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 });
 // fontFamily:{
 //   sans:['Inter',...defaultTheme.fontFamily.sans],

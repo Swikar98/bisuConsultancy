@@ -8,7 +8,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <div className="grid grid-cols-1 h-full md:grid-cols-2  justify-center rounded-lg bg-gray-200 border mt-10">
+      <div className="grid grid-cols-1 h-full md:grid-cols-2  justify-center rounded-lg bg-gray-200 border ">
         <div className="m-4">
           <Image src={Logo} alt="logo" height={100} width={125} />
           <p className="mt-4">
