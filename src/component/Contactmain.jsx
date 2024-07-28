@@ -1,4 +1,70 @@
+import { useState } from "react";
+
+// const initValues = {
+//   fname: "",
+//   lname:"",
+//   email: "",
+//   subject: "",
+//   message: "", }
+
+
+//   const initState = {values:initValues};
+
+
+
+
+
 export default function Contactmain() {
+
+  // const [state, setState] = useState(initState);
+  // const {values, isLoading} = state;
+
+  // const handleChange = ({target}) => setState((prev) =>({
+  //   ...prev,
+  //   values: {
+  //     ...prev.values,
+  //     [target.fname]: target.value,
+  //   },
+  // }));
+
+  // const onSubmit = async () => {
+  //   setState((prev) =>( {
+  //     ...prev,
+  //     isLoading:true,
+  //   }));
+  // }
+  const [fname, setFname]= useState('');
+  const [lname, setLname] = useState('');
+  const [email, setEmail] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
+  const [status, setStatus] = useState('');
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const res = await fetch('/api/contacts',{
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({fname, lname, email, subject, message}),
+    });
+
+    const data = await res.json();
+
+    if (res.ok) {
+      setStatus('Message sent Successfully!');
+      setFname('');
+      setLname('');
+      setEmail('');
+      setSubject('');
+      setMessage('');
+    }else {
+      setStatus(`Error: ${data.error}`);
+    }
+  };
+
   return (
     <section class="" id="contact">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
@@ -124,7 +190,13 @@ export default function Contactmain() {
                 Got a issue? Want to send feedback? 
                 Need details about our Courses? Let us know. 
             </p>  */}
-              <form action="#">
+
+
+            {/* contact form submission  */}
+
+
+            
+              <form onSubmit={handleSubmit}>
                 <div className="flex flex-row">
                   <div className="w-1/2 pr-2 ">
                     <label
@@ -141,6 +213,9 @@ export default function Contactmain() {
                                           text-sm rounded-lg block w-full p-2.5"
                       placeholder="Enter First Name"
                       required
+                      name="fname"
+                      value={fname}
+                      onChange={(e) => setFname(e.target.value)}
                     />
                   </div>
                   <div className="w-1/2 pl-2">
@@ -157,6 +232,9 @@ export default function Contactmain() {
                                           border-gray-300 text-gray-900  
                                           text-sm rounded-lg block w-full p-2.5"
                       placeholder="Enter Last Name"
+                       name="lname"
+                       value={lname}
+                       onChange={(e) => setLname(e.target.value)}
                     />
                   </div>
                 </div>
@@ -175,6 +253,9 @@ export default function Contactmain() {
                                       text-sm rounded-lg block w-full p-2.5"
                     placeholder="your email"
                     required
+                     name="email"
+                     value={email}
+                     onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div>
@@ -192,6 +273,9 @@ export default function Contactmain() {
                                       border border-gray-300 shadow-sm "
                     placeholder="What issue/suggestion do you have?"
                     required
+                     name="subject"
+                     value={subject}
+                     onChange={(e) =>setSubject(e.target.value)}
                   />
                 </div>
                 <div>
@@ -208,17 +292,24 @@ export default function Contactmain() {
                                          text-gray-900 bg-gray-50 rounded-lg  
                                          shadow-sm border border-gray-300 "
                     placeholder="Query/Suggestion..."
+                     name="message"
+                     value={message}
+                     onChange={(e) => setMessage(e.target.value)}
                   />
                 </div>
                 <button
                   type="submit"
+                  // isLoading={isLoading}
+                  
                   className="mt-2 p-2 float-right text-white   
                                    rounded-lg border-green-600  
                                    bg-blue-600 hover:scale-105"
+                                  //  onClick={onSubmit}
                 >
                   Send message
                 </button>
               </form>
+              {status && <p>{status}</p>}
             </div>
           </div>
         </div>
