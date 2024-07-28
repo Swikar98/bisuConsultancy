@@ -11,20 +11,22 @@ import { navData } from "../constants/index";
 import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 
-const MobileNavLink = ({ children, ...props }) => {
+const MobileNavLink = ({ children, href, onClick }) => {
   return (
-    <Popover.Button
-      as={Link}
+    <button
       className="block text-base leading-7 tracking-tight text-blue-600"
-      {...props}
+      onClick={onClick}
     >
       {children}
-    </Popover.Button>
+    </button>
   );
 };
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [expandedItem, setExpandedItem] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
+
   const handleScroll = () => {
     const scrollY = window.scrollY;
     setIsScrolled(scrollY > 50);
@@ -33,35 +35,43 @@ const Header = () => {
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("scroll", handleScroll);
-
-     
       return () => window.removeEventListener("scroll", handleScroll);
     }
   }, []);
+
+  const handleNavClick = (id) => {
+    setExpandedItem(expandedItem === id ? null : id);
+  };
+
+  const handleMenuToggle = (open) => {
+    setMenuOpen(open);
+  };
+
+  const handleLinkClick = (event, href) => {
+    event.preventDefault();
+    // Handle navigation manually if necessary or use Next.js navigation
+    // e.g., using router.push(href)
+    window.location.href = href;
+  };
+
   return (
     <header
-      className={`w-full sticky  top-0 z-50 lg:bg-gray-300 bg-white  ${
-        isScrolled && "shadow-xl "
+      className={`w-full sticky top-0 z-50 lg:bg-gray-300 bg-white ${
+        isScrolled ? "shadow-xl" : ""
       }`}
     >
-      <nav className="underline-offset-auto   ">
-        <Container className="  flex justify-between py-2  pr-10  bg-transparent">
+      <nav className="underline-offset-auto">
+        <Container className="flex justify-between py-2 pr-10 bg-transparent">
           {/* Logo */}
-          <div className="relative z-10 flex items -center  " >
+          <div className="relative z-10 flex items-center">
             <Logo />
           </div>
           {/* NavLinks */}
-          <div className="hidden lg:flex  bg-gradient-to-r from-teal-300 via-green-300 to-blue-300 justify-center lg:mt-5 lg:h-14 px-4 rounded-lg lg:gap-6 items-center">
-            <NavLinks className=" text-teal-700" />
+          <div className="hidden lg:flex bg-gradient-to-r from-teal-300 via-green-300 to-blue-300 justify-center lg:mt-5 lg:h-14 px-4 rounded-lg lg:gap-6 items-center">
+            <NavLinks className="text-teal-700" />
           </div>
           {/* Buttons */}
           <div className="flex items-center gap-6">
-            {/* <Button href="#" variant="outline" className="hidden lg:block ">
-             Sign In
-            </Button>
-            <Button href="#" className="hidden lg:block">
-              Register
-            </Button> */}
             {/* Mobile NavLinks */}
             <Popover className="lg:hidden">
               {({ open }) => (
@@ -71,6 +81,7 @@ const Header = () => {
                      hover:bg-blue-600/50 hover:stroke-gray-600 active:stroke-gray-900 
                      [&:not(:focus-visible)]:focus:outline-none outline-none"
                     aria-label="Toggle site navigation"
+                    onClick={() => handleMenuToggle(!menuOpen)}
                   >
                     {({ open }) =>
                       open ? (
@@ -81,7 +92,7 @@ const Header = () => {
                     }
                   </Popover.Button>
                   <AnimatePresence initial={false}>
-                    {open && (
+                    {menuOpen && (
                       <>
                         <Popover.Overlay
                           static
@@ -104,17 +115,41 @@ const Header = () => {
                           className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-gray-50 px-6 pb-6 pt-32 shadow-2xl shadow-blue-600/20"
                         >
                           <div className="space-y-4">
-                            {navData.map(({ _id, title, href }) => (
-                              <MobileNavLink href={href} key={_id}>
-                                {title}
-                              </MobileNavLink>
+                            {navData.map(({ _id, title, href, subItems }) => (
+                              <div key={_id}>
+                                <MobileNavLink
+                                  href={href}
+                                  onClick={(e) => {
+                                    if (subItems) {
+                                      handleNavClick(_id);
+                                    } else {
+                                      handleLinkClick(e, href);
+                                    }
+                                  }}
+                                >
+                                  {title}
+                                </MobileNavLink>
+                                {expandedItem === _id && subItems && (
+                                  <div className="ml-4 mt-2 space-y-2">
+                                    {subItems.map(({ _id, title, href }) => (
+                                      <MobileNavLink
+                                        key={_id}
+                                        href={href}
+                                        onClick={(e) => handleLinkClick(e, href)}
+                                      >
+                                        {title}
+                                      </MobileNavLink>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
                             ))}
                           </div>
                           <div className="mt-8 flex flex-col gap-4">
-                            {/* <Button href="#"  variant="outline">
+                            <Button href="#" variant="outline">
                               Sign In
                             </Button>
-                            <Button href="#">Register</Button> */}
+                            <Button href="#">Register</Button>
                           </div>
                         </Popover.Panel>
                       </>
