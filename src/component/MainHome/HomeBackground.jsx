@@ -8,7 +8,7 @@ import Link from "next/link";
 const HomeBackground = () => {
   return (
     <div className="container mx-auto p-4 ">
-      <div className="flex flex-col lg:flex-row h-full mt-12 items-center justify-center lg:space-x-8">
+      <div className="flex flex-col lg:flex-row mt-16 mb-8 items-center justify-center lg:space-x-8">
         <animated.div className="text-center lg:text-left lg:mt-16 lg:mx-8">
           <p className="font-bold text-blue-600">RPL Certification in Australia</p>
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-2">Are you Facing</h1>
