@@ -4,7 +4,7 @@ import SectionHead from "./SectionHead";
 
 export default function ServicesMenu() {
   return (
-    <div className="container mx-auto mt-24 ">
+    <div className="container mx-auto lg:mt-18 ">
       <section className="h-full rounded-lg ">
         <div className="text-center animate-typing overflow-hidden whitespace-nowrap mt-4 rounded-lg p-8 ">
           <SectionHead

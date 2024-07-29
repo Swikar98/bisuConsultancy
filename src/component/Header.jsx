@@ -56,7 +56,7 @@ const Header = () => {
 
   return (
     <header
-      className={`w-full sticky top-0 z-50 lg:bg-gray-300 bg-white ${
+      className={`w-full sticky top-0 z-50 bg-gray-300 ${
         isScrolled ? "shadow-xl" : ""
       }`}
     >
@@ -67,8 +67,8 @@ const Header = () => {
             <Logo />
           </div>
           {/* NavLinks */}
-          <div className="hidden lg:flex bg-gradient-to-r from-teal-300 via-green-300 to-blue-300 justify-center lg:mt-5 lg:h-14 px-4 rounded-lg lg:gap-6 items-center">
-            <NavLinks className="text-teal-700" />
+          <div className="hidden lg:flex bg-blue-600 justify-center lg:mt-5 lg:h-14 px-4 rounded-lg lg:gap-6 items-center">
+            <NavLinks className="text-blue-600" />
           </div>
           {/* Buttons */}
           <div className="flex items-center gap-6">

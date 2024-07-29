@@ -1,5 +1,5 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import SectionHead from "./SectionHead";
 import { PiCertificate } from "react-icons/pi";
 
@@ -13,8 +13,12 @@ const Shape = () => {
     "Skilled Visa",
   ];
 
+  // Framer Motion scroll and transform hooks
+  const { scrollY } = useScroll();
+  const yTransform = useTransform(scrollY, [0, 500], [0, 50]);
+
   return (
-    <div className="container mx-auto mt-24 mb-8">
+    <div className="container mx-auto lg:mt-18 lg:mb-8 px-4 sm:px-6 lg:px-8">
       <section className="mt-8 p-6 rounded-xl">
         <div className="text-center mb-6">
           <SectionHead
@@ -22,19 +26,20 @@ const Shape = () => {
             mainHeader="We Can Shape Your Vision."
           />
         </div>
-        <div className="grid md:grid-cols-3 lg:grid-cols-6 gap-4 justify-center items-center">
+        <div className="grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 gap-4">
           {visaTypes.map((visaType, index) => (
             <motion.div
               key={index}
-              className="bg-gray-300 w-full p-4 px-16 hover:shadow-md hover:shadow-black/25 transition-all hover:bg-gray-300 rounded-lg"
+              className="bg-gray-300 hover:shadow-md hover:shadow-black/25 transition-all border-2 hover:bg-gray-300 rounded-lg"
+              style={{ y: yTransform }} // Apply scroll-based transform
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <div className="text-center">
-                <PiCertificate className="text-blue-600 size-20 block mx-auto" />
+              <div className="text-center mb-2">
+                <PiCertificate className="text-blue-600 text-2xl sm:text-2xl lg:text-6xl block mx-auto" />
               </div>
-              <h4 className="font-semibold text-center my-3">{visaType}</h4>
+              <h4 className="lg:font-semibold text-center lg:text-lg text-lg">{visaType}</h4>
             </motion.div>
           ))}
         </div>

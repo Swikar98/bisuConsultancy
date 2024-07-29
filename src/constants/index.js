@@ -10,8 +10,8 @@ export const navData = [
     href: "#",
     subItems: [
       { _id: 201, title: "Study in Australia", href: "/aus" },
-      { _id: 202, title: "Study in USA", href: "/usa" },
-      { _id: 203, title: "Study in Canada", href: "/canada" },
+      // { _id: 202, title: "Study in USA", href: "/usa" },
+      // { _id: 203, title: "Study in Canada", href: "/canada" },
     ],
   },
   { _id: 103, title: "EVENT", href: "/event" },
