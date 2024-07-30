@@ -19,10 +19,10 @@ const HomeBackground = () => {
         </p> 
 
         <div className="flex flex-col sm:flex-row lg:w-76 w-full p-4 gap-4 mb-6 justify-center">
-          <button className="bg-blue-600 border-2 p-2 hover:bg-white hover:text-black hover:border-blue-600 font-bold text-white rounded">
+          <button className="bg-blue-600 border-2 border-transparent p-2 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 font-bold text-white rounded transition-colors duration-300">
             Contact Us for Visa!
           </button>
-          <button className="border-2 bg-white p-2 font-bold rounded hover:bg-blue-600 hover:text-white border-blue-600">
+          <button className="border-2 border-blue-600 bg-white p-2 font-bold rounded focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors duration-300">
             Book Appointment
           </button>
         </div> 

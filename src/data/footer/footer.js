@@ -8,6 +8,28 @@ const footerData = {
     alt: "logo",
   },
   links: [
+ 
+  
+   
+    {
+      category: "Quick Links",
+      items: [
+        { label: "About Us", url: "https://bisu-consultancy.vercel.app/aboutus" },
+        { label: "Services", url: "#" },
+        { label: "Visas", url: "#" },
+        { label: "Study Abroad", url: "#" },
+        { label: " Contact", url: "#" },
+        
+      ],
+    },
+    {
+      category: "Contact Us",
+      items: [
+        { label: "New South Wales 2145 Australia,Westmead", url: "https://maps.app.goo.gl/NG2F6eChijiLgUEA8" },
+        { label: "info@bisu.com.au", url: "#" },
+        
+      ],
+    },
     {
       category: "Resource Links",
       items: [
@@ -26,7 +48,6 @@ const footerData = {
 
       ],
     },
-  
     {
       category: "Important Links",
       items: [
@@ -41,25 +62,6 @@ const footerData = {
         { label: "Australian Federal Police (AFP)", url: "https://afpnationalpolicechecks.converga.com.au/" },
 
 
-      ],
-    },
-    {
-      category: "Quick Links",
-      items: [
-        { label: "About Us", url: "https://bisu-consultancy.vercel.app/aboutus" },
-        { label: "Services", url: "#" },
-        { label: "Visas", url: "#" },
-        { label: "Study Abroad", url: "#" },
-        { label: " Contact", url: "#" },
-        
-      ],
-    },
-    {
-      category: "Contact Us",
-      items: [
-        { label: "New South Wales 2145 Australia,Westmead", url: "https://maps.app.goo.gl/NG2F6eChijiLgUEA8" },
-        { label: "info@bisu.com.au", url: "#" },
-        
       ],
     },
   ],
