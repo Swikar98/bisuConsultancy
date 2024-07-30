@@ -9,42 +9,57 @@ const footerData = {
   },
   links: [
     {
-      category: "Quick Links",
-      items: [
-        { label: "About Us", url: "https://bisu-consultancy.vercel.app/aboutus" },
-        { label: "Scholarships", url: "#" },
-        { label: "Visas", url: "#" },
-        { label: "Countries", url: "#" },
-        { label: "Australian Universities", url: "#" },
-        
-      ],
-    },
-    {
       category: "Resource Links",
       items: [
         { label: "University Courses in Australia", url: "https://www.universitycourses.com.au/" },
         { label: "Seek Australia", url: "https://www.seek.com.au/" },
         { label: "Jobs and Skills in Australia", url: "https://www.jobsandskills.gov.au/" },
-        { label: "Countries", url: "#" },
-        { label: "Australian Universities", url: "#" },
+        { label: "Indeed Australia", url: "https://au.indeed.com/" },
+        { label: "Australian Bureau of Statistics", url: "https://www.abs.gov.au/" },
+        { label: "Training Australia", url: "https://training.gov.au/" },
+        { label: "ASQA", url: "https://www.asqa.gov.au/" },
+        { label: "Australian Career Guide", url: "https://www.jobsandskills.gov.au/" },
+        { label: "Transport for NSW", url: "https://www.transport.nsw.gov.au/" },
+        { label: "Gumtree", url: "https://www.gumtree.com.au/" },
+
+
+
       ],
     },
+  
     {
       category: "Important Links",
       items: [
-        { label: "About Us", url: "https://bisu-consultancy.vercel.app/aboutus" },
-        { label: "Scholarships", url: "#" },
-        { label: "Visas", url: "#" },
-        { label: "Countries", url: "#" },
-        { label: "Australian Universities", url: "#" },
+        { label: "Bank Account Open", url: "https://bisu-consultancy.verhttps://www.commbank.com.au/moving-to-australia.html?agentid=A5991&ocid=mfs-A5991" },
+        { label: "IMMI", url: "https://immi.homeaffairs.gov.au/help-support/departmental-forms/pdf-forms" },
+        { label: "Tax File Number Application", url: "https://www.ato.gov.au/individuals-and-families/tax-file-number/apply-for-a-tfn/foreign-passport-holders-permanent-migrants-and-temporary-visitors-tfn-application" },
+        { label: "Migration Agents", url: "https://portal.mara.gov.au/search-the-register-of-migration-agents/" },
+        { label: "Accomodation", url: "https://www.studyinaustralia.gov.au/english/live-in-australia/accommodation" },
+        { label: "Unique Student Identifier", url: "https://www.usi.gov.au/" },
+        { label: "CRICOS", url: "https://cricos.education.gov.au/Course/CourseSearch.aspx" },
+        { label: "Book Medical", url: "https://bmvs.onlineappointmentscheduling.net.au/oasis/" },
+        { label: "Australian Federal Police (AFP)", url: "https://afpnationalpolicechecks.converga.com.au/" },
+
+
       ],
     },
     {
-      category: "Contact us",
+      category: "Quick Links",
       items: [
-        { label: "New South Wales 2145 Australia, Westmead" },
-        { label: "bisuglobal@gmail.com" },
-        { label: "Report Bug" },
+        { label: "About Us", url: "https://bisu-consultancy.vercel.app/aboutus" },
+        { label: "Services", url: "#" },
+        { label: "Visas", url: "#" },
+        { label: "Study Abroad", url: "#" },
+        { label: " Contact", url: "#" },
+        
+      ],
+    },
+    {
+      category: "Support",
+      items: [
+        { label: "Chat Support", url: "#" },
+        { label: "Help Center", url: "#" },
+        
       ],
     },
   ],
