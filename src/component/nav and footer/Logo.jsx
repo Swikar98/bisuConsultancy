@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import Log from '../image/logo.png'
+import Log from '../../image/logo.png'
 // import clsx from "clsx"
 
 const Logo = () => {

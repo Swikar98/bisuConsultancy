@@ -2,7 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import { AnimatePresence, motion } from "framer-motion";
-import { navData } from "../constants/index";
+import { navData } from "../../constants/index";
 
 const DropdownMenu = ({ items }) => {
   const [hoveredIndex, setHoveredIndex] = useState(null);

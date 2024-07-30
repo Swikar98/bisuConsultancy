@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa";
 
-import footerData from "../data/footer/footer"; // Adjust the path as needed
+import footerData from "../../data/footer/footer"; // Adjust the path as needed
 
 const Footer = () => {
   return (

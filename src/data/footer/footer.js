@@ -55,10 +55,10 @@ const footerData = {
       ],
     },
     {
-      category: "Support",
+      category: "Contact Us",
       items: [
-        { label: "Chat Support", url: "#" },
-        { label: "Help Center", url: "#" },
+        { label: "New South Wales 2145 Australia,Westmead", url: "https://maps.app.goo.gl/NG2F6eChijiLgUEA8" },
+        { label: "info@bisu.com.au", url: "#" },
         
       ],
     },

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import Header from '../component/Header'
-import Footer from '../component/Footer'
+import Header from '../component/nav and footer/Header'
+import Footer from '../component/nav and footer/Footer'
 import WhatsApp from './whatsapp/page'
 export const metadata: Metadata = {
   title: 'BISU GLOBAL',

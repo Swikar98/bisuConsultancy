@@ -14,11 +14,11 @@ const HomeBackground = () => {
         <h2 className="font-bold lg:text-[80px] text-4xl text-white mb-6 animate-fade-in">
           Study in Australia
         </h2>
-        <p className="text-white lg:text-2xl mb-4 max-w-xl mx-4 lg:mx-0 animate-fade-in">
+        <p className="text-white lg:text-2xl mb-6 max-w-xl mx-4 lg:mx-0 animate-fade-in">
           We can solve your visa-related issue, whether it's a new visa or permanent residence application.
         </p> 
 
-        <div className="flex flex-col sm:flex-row gap-2 px-4 mb-6 justify-center">
+        <div className="flex flex-col sm:flex-row lg:w-76 w-full p-4 gap-4 mb-6 justify-center">
           <button className="bg-blue-600 border-2 p-2 hover:bg-white hover:text-black hover:border-blue-600 font-bold text-white rounded">
             Contact Us for Visa!
           </button>
