@@ -17,7 +17,7 @@ const Footer = () => {
             </div>
             {footerData.links.map((section, index) => (
               <div key={index} className="flex flex-col flex-1">
-                <h2 className="text-teal-700 mt-4 font-bold text-lg">{section.category}</h2>
+                <h2 className="text-teal-700 mt-4 underline font-bold text-lg">{section.category}</h2>
                 <ul className="mt-2 space-y-2">
                   {section.items.map((item, itemIndex) => (
                     <li key={itemIndex}>
@@ -30,16 +30,7 @@ const Footer = () => {
                 </ul>
               </div>
             ))}
-            <div className="flex flex-col items-center  flex-1">
-              <h2 style={{ textDecoration: 'underline' }} className="text-teal-700 mt-4 font-bold text-lg">FOLLOW US</h2>
-              <div className="mt-4 mb-4 text-teal-600 flex gap-4">
-                {footerData.social.map((social, socialIndex) => (
-                  <a key={socialIndex} href={social.url} target="_blank" rel="noopener noreferrer">
-                    <social.icon size={20} />
-                  </a>
-                ))}
-              </div>
-            </div>
+           
           </div>
         </div>
       </div>

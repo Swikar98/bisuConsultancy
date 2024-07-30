@@ -40,7 +40,7 @@ export default function MainCrousel() {
   };
 
   return (
-    <div className="relative  lg:w-[550px] lg:h-[550px] md:h-[500px] md:w-[500px] sm:w-[100px] sm:h-[100px] h-[270px] w-[270px] mx-auto overflow-hidden rounded-full">
+    <div className="relative  lg:w-[450px] lg:h-[450px] md:h-[500px] md:w-[500px] sm:w-[100px] sm:h-[100px] h-[250px] w-[250px] mx-auto overflow-hidden rounded-lg">
       <div className="absolute inset-0 flex items-center justify-center">
         {slides.map((slide, index) => (
           <div

@@ -40,11 +40,11 @@ const footerData = {
       ],
     },
     {
-      category: "Support",
+      category: "Contact us",
       items: [
-        { label: "Chat Support", url: "#" },
-        { label: "Help Center", url: "#" },
-        { label: "Report Bug", url: "#" },
+        { label: "New South Wales 2145 Australia, Westmead" },
+        { label: "bisuglobal@gmail.com" },
+        { label: "Report Bug" },
       ],
     },
   ],

@@ -13,6 +13,20 @@ module.exports = withMT({
   ],
   theme: {
     extend: {
+      colors: {
+        'smoky-light': 'rgba(99, 164, 255, 0.7)', // Light blue
+        'smoky-mid': 'rgba(67, 56, 202, 0.7)',   // Mid blue
+        'smoky-dark': 'rgba(37, 99, 235, 0.7)',  // Dark blue
+      },
+      backgroundImage: {
+        'smoky-gradient': 'linear-gradient(to bottom right, rgba(99, 164, 255, 0.7), rgba(67, 56, 202, 0.7), rgba(37, 99, 235, 0.7))',
+      },
+      blur: {
+        'sm': '4px',  // Custom blur size
+      },
+      backgroundBlendMode: {
+        'overlay': 'overlay',
+      },
       keyframes: {
         typing: {
           "0%": {
