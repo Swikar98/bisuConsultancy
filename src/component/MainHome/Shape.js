@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import SectionHead from "./SectionHead";
+import SectionHead from "../SectionHead";
 import { PiCertificate } from "react-icons/pi";
 
 const Shape = () => {
@@ -18,7 +18,7 @@ const Shape = () => {
   const yTransform = useTransform(scrollY, [0, 500], [0, 50]);
 
   return (
-    <div className="bg-white flex items-center justify-center lg:h-[40vh] h-[40vh] lg:px-">
+    <div className="bg-white flex items-center justify-center lg:h-[60vh] h-[70vh] lg:px-">
       <div className="container mx-auto bg-white px-4 sm:px-6 8">
     <section className=" p-6 rounded-xl">
       <div className="text-center mb-2">

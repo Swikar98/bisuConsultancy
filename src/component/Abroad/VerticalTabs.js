@@ -5,8 +5,11 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Aus from "../../component/Abroad/Aus"
-import Canada from "../../component/Abroad/Canada"
+import { useTheme } from '@mui/material/styles';
+import dynamic from 'next/dynamic';
+
+const Aus = dynamic(() => import('../../component/Abroad/Aus'), { ssr: false });
+const Canada = dynamic(() => import('../../component/Abroad/Canada'), { ssr: false });
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -42,7 +45,8 @@ function a11yProps(index) {
 }
 
 export default function VerticalTabs() {
-  const isSmallScreen = useMediaQuery('(max-width:600px)');
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down('sm'));
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -51,33 +55,57 @@ export default function VerticalTabs() {
 
   return (
     <Box
-      sx={{ flexGrow: 1, bgcolor: 'background.paper', display: isSmallScreen ? '' : 'flex', lg: "100vh" }}
+      sx={{
+        flexGrow: 1,
+        bgcolor: 'background.paper',
+        display: 'flex',
+        flexDirection: isSmallScreen ? 'column' : 'row',
+        alignItems: 'center',
+      }}
     >
-      <Tabs
-        orientation={isSmallScreen ? 'horizontal' : 'vertical'}
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        aria-label="Vertical tabs example"
-        sx={{ borderRight: isSmallScreen ? 0 : 1, borderColor: 'divider' }}
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: isSmallScreen ? 'column' : 'row',
+          alignItems: 'center',
+          justifyContent: isSmallScreen ? 'center' : 'flex-start',
+          
+          mb: 2,
+        }}
       >
-        <Tab label="Study in Australia" {...a11yProps(0)} />
-        <Tab label="Study in Canada" {...a11yProps(1)} />
-        <Tab label="Study in USA" {...a11yProps(2)} />
-        <Tab label="Study in Netherland" {...a11yProps(3)} />
-      </Tabs>
-      <TabPanel value={value} index={0}>
-        <Aus />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        <Canada />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        Item Four
-      </TabPanel>
+        <Box
+          sx={{
+            display: isSmallScreen ? 'none' : 'block',
+            flexGrow: 1,
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
+          <Tabs
+            orientation={isSmallScreen ? 'horizontal' : 'vertical'}
+            variant="scrollable"
+            value={value}
+            onChange={handleChange}
+            aria-label="Vertical tabs example"
+            sx={{ borderRight: isSmallScreen ? 0 : 1, borderColor: 'divider' }}
+          >
+            <Tab label="Study in Australia" {...a11yProps(0)} />
+            {/* <Tab label="Study in Canada" {...a11yProps(1)} /> */}
+            {/* Additional tabs */}
+          </Tabs>
+        </Box>
+      </Box>
+      <Box
+        sx={{ flexGrow: 1, display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+      >
+        <TabPanel value={value} index={0}>
+          <Aus />
+        </TabPanel>
+        {/* <TabPanel value={value} index={1}>
+          <Canada />
+        </TabPanel> */}
+        {/* Additional TabPanels */}
+      </Box>
     </Box>
   );
 }

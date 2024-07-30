@@ -69,7 +69,7 @@ export default function Contactmain() {
     <section class="" id="contact">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
         <div className="mb-4">
-          <div className="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
+          <div className="max-w-3xl text-center sm:text-center md:mx-auto ">
             <p className="text-base font-semibold uppercase tracking-wide text-blue-600 dark:text-blue-200">
               Contact
             </p>
@@ -180,23 +180,8 @@ export default function Contactmain() {
                 </li>
               </ul>
             </div>
-            <div className="relative h-screen  py-2 px-4 mx-auto max-w-screen-md">
-              {/* <h2 className="mb-4 text-4xl font-extrabold  
-                           text-center text-blue-600"> 
-                Contact Us 
-            </h2> 
-            <p className="mb-4 font-light text-left  
-                           text-blue-600 sm:text-xl"> 
-                Got a issue? Want to send feedback? 
-                Need details about our Courses? Let us know. 
-            </p>  */}
-
-
-            {/* contact form submission  */}
-
-
-            
-              <form onSubmit={handleSubmit}>
+            <div className="relative  py-2 px-4 mx-auto max-w-screen-md">
+          <form onSubmit={handleSubmit}>
                 <div className="flex flex-row">
                   <div className="w-1/2 pr-2 ">
                     <label

@@ -1,4 +1,4 @@
-import servicesData from "../../data/home service/service";
+import servicesData from "../data/home service/service";
 
 export default function ServicesItem() {
   return (

@@ -3,7 +3,7 @@ import About from "../../image/visa.jpg"
 export default function Visacompany(){
     return(
         <section className="bg-white  ">
-    <div className="container mx-auto h-screen py-16 px-4 sm:px-6 lg:px-8">
+    <div className="container mx-auto  py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div className="max-w-lg">
                 <h2 className="text-3xl font-extrabold text-gray-900 sm:text-4xl">Visa </h2>

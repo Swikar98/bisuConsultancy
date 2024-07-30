@@ -18,7 +18,7 @@ const DropdownMenu = ({ items }) => {
         <div key={_id} className="relative inline-block">
           {subItems ? (
             <div
-              className="font-bold py-2 text-base text-white transition-colors hover:text-gray-900 sm:hover:bg-transparent"
+              className="font-bold py-2 text-base text-black hover:bg-blue-600 transition-colors hover:text-gray-900 sm:hover:bg-transparent"
               onMouseEnter={() => setHoveredIndex(_id)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
@@ -27,7 +27,7 @@ const DropdownMenu = ({ items }) => {
           ) : (
             <Link href={href}>
               <span
-                className="font-bold py-2 text-base text-white transition-colors relative"
+                className="font-bold py-2 text-base text-black hover:bg-blue-600 hover:text-white p-2 rounded-lg transition-colors relative"
                 onMouseEnter={() => setHoveredIndex(_id)}
                 onMouseLeave={() => setHoveredIndex(null)}
               >

@@ -1,6 +1,6 @@
 "use client";
 import Text from "../../component/Text";
-import ServicesMenu from "../../component/MainHome/ServicesMenu"
+import ServicesMenu from "../../component/ServicesMenu"
 import HomeBackground from "../../component/MainHome/HomeBackground"
 import Shape from "../../component/MainHome/Shape"
 import Choose from "../../component/MainHome/chooseus"
