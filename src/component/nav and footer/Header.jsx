@@ -145,12 +145,12 @@ const Header = () => {
                               </div>
                             ))}
                           </div>
-                          <div className="mt-8 flex flex-col gap-4">
+                          {/* <div className="mt-8 flex flex-col gap-4">
                             <Button href="#" variant="outline">
                               Sign In
                             </Button>
                             <Button href="#">Register</Button>
-                          </div>
+                          </div> */}
                         </Popover.Panel>
                       </>
                     )}
