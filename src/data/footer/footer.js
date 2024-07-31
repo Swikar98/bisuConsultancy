@@ -14,11 +14,11 @@ const footerData = {
     {
       category: "Quick Links",
       items: [
-        { label: "About Us", url: "https://bisu-consultancy.vercel.app/aboutus" },
-        { label: "Services", url: "#" },
-        { label: "Visas", url: "#" },
-        { label: "Study Abroad", url: "#" },
-        { label: " Contact", url: "#" },
+        { label: "About Us", url: "/aboutus" },
+        { label: "Services", url: "/service" },
+        { label: "Visas", url: "/abroad" },
+        { label: "Study Abroad", url: "/abroad" },
+        { label: " Contact", url: "/contact" },
         
       ],
     },
