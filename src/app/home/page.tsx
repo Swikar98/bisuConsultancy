@@ -4,13 +4,13 @@ import ServicesMenu from "../../component/ServicesMenu"
 import HomeBackground from "../../component/MainHome/HomeBackground"
 import Shape from "../../component/MainHome/Shape"
 import Choose from "../../component/MainHome/chooseus"
-
+import Slide from "../../component/MainHome/Crousel/showSlider"
 
 
 export default function Home() {
   return (
     <>
-      <HomeBackground  /> 
+    <Slide/>
       <Shape/>
       <Choose/>
       <ServicesMenu/>

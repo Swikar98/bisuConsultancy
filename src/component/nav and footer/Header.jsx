@@ -49,8 +49,6 @@ const Header = () => {
 
   const handleLinkClick = (event, href) => {
     event.preventDefault();
-    // Handle navigation manually if necessary or use Next.js navigation
-    // e.g., using router.push(href)
     window.location.href = href;
   };
 
@@ -61,7 +59,7 @@ const Header = () => {
       }`}
     >
       <nav className="underline-offset-auto">
-        <Container className="flex justify-between py-2 pr-10 bg-transparent">
+        <Container className="flex justify-between py-2 pr-10 ">
           {/* Logo */}
           <div className="relative z-10 flex items-center">
             <Logo />
