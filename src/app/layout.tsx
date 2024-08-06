@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body  >
         <Header/>
-       <div className='bg-gray-300  '>{children}</div>
+       <div className='bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500  '>{children}</div>
         <div className=''> <Footer/></div>
         <div className=''><WhatsApp/></div>
         </body>

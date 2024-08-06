@@ -26,7 +26,7 @@ const ChooseUs = () => {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center bg-gradient-to-r from-gray-100 via-white to-gray-400 lg:h-[60vh] p-4 h-[70vh] w-full overflow-hidden">
+    <div className="relative flex items-center justify-center  lg:h-[60vh] p-4 h-[70vh] w-full overflow-hidden">
       <div ref={backgroundRef} className="absolute inset-0"></div>
       {[...Array(20)].map((_, i) => (
         <div
@@ -39,7 +39,7 @@ const ChooseUs = () => {
         ></div>
       ))}
       <motion.div
-        className="relative z-10 text-center border-4 border-blue-300 p-2 lg:p-4 bg-white bg-opacity-80 rounded-lg shadow-lg"
+        className="relative z-10 text-center border-4 border-blue-100 p-2 lg:p-4 bg-white bg-opacity-80 rounded-lg shadow-lg"
         style={{ y: yTransformText }}
         transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
       >
