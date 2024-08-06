@@ -168,6 +168,7 @@
         height: 200px;
     }
     .list .item .content {
+        margin-top: 50px;
         left: 60px;
         width: 300px;
     }
@@ -192,6 +193,7 @@
         height: 160px;
     }
     .list .item .content {
+        margin-top: 50px;
         left: 20px;
         width: 250px;
     }
@@ -218,7 +220,7 @@
     .list .item .content {
         left: 10px;
         width: 200px;
-        top: 30%;
+        top: 35%;
     }
     .content .title, .content .name {
         font-size: 55px;

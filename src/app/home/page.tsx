@@ -11,8 +11,9 @@ export default function Home() {
   return (
     <>
     <Slide/>
-    <HeroSection/>
+   
       <Choose/>
+      <HeroSection/>
       <ServicesMenu/>
     </>
   );
