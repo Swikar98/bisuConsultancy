@@ -84,7 +84,7 @@ const Carousel = () => {
     }, []);
 
     return (
-        <div className="carousel" ref={carouselRef}>
+        <div className="carousel absolute" ref={carouselRef}>
             <div className="list" ref={listRef}>
                 {items.map((item, index) => (
                     <div key={index} className="item">
@@ -107,7 +107,7 @@ const Carousel = () => {
                     </div>
                 ))}
             </div>
-            <div className="arrows">
+            <div className="arrows ">
                 <button className="prev" ref={prevBtnRef} onClick={() => showSlider('prev')}>Prev</button>
                 <button className="next" ref={nextBtnRef} onClick={() => showSlider('next')}>Next</button>
             </div>

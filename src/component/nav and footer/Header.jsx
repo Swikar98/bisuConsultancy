@@ -65,7 +65,7 @@ const Header = () => {
             <Logo />
           </div>
           {/* NavLinks */}
-          <div className="hidden  lg:flex justify-center lg:mt-5 lg:h-14 px-4 rounded-lg lg:gap-6 items-center">
+          <div className="hidden  lg:flex justify-center lg:mt-5 bg-transparent lg:h-14 px-4 rounded-lg lg:gap-6 items-center">
             <NavLinks className="" />
           </div>
           {/* Buttons */}
