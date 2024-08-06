@@ -28,7 +28,7 @@ const HeroSection = () => {
   useEffect(() => {
     anime({
       targets: ".background-element",
-      translateX: () => anime.random(-10, 30),
+      translateX: () => anime.random(-10, 40),
       translateY: () => anime.random(-50, 50),
       duration: 2000,
       easing: "easeInOutQuad",

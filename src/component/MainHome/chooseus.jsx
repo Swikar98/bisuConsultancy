@@ -25,12 +25,12 @@ const ChooseUs = () => {
   }, []);
 
   return (
-    <div className="relative flex items-center justify-center bg-gradient-to-r from-gray-300 via-gray-400 to-gray-500 lg:h-[60vh] p-4 h-[70vh] w-full overflow-hidden">
+    <div className="relative flex items-center justify-center bg-gradient-to-r from-gray-200 via-white to-gray-300 lg:h-[60vh] p-4 h-[70vh] w-full overflow-hidden">
       <div ref={backgroundRef} className="absolute inset-0"></div>
       {[...Array(20)].map((_, i) => (
         <div
           key={i}
-          className="background-element w-10 h-10 bg-white opacity-20 absolute rounded-full"
+          className="background-element w-10 h-10 bg-blue-100 opacity-20 absolute rounded-full"
           style={{
             top: `${Math.random() * 100}%`,
             left: `${Math.random() * 100}%`

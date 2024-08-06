@@ -16,7 +16,7 @@ const StickyWhatsAppButton = ({ phoneNumber, message }) => {
     textDecoration: 'none',
     color: 'white', // Text color
     backgroundColor: '#25D366', // WhatsApp green color
-    borderRadius: '50px', // Rounded border
+    borderRadius: '100px', // Rounded border
     padding: '10px 20px', // Adjust padding for better spacing
     boxShadow: '0 0 10px rgba(0, 0, 0, 0.5)', // Optional shadow for better visibility
   };
@@ -24,8 +24,8 @@ const StickyWhatsAppButton = ({ phoneNumber, message }) => {
   const logoStyle = {
     width: '30px', // Adjust size as needed
     height: '30px', // Adjust size as needed
-    borderRadius: '40%', // Round the logo itself
-    marginRight: '10px', // Spacing between logo and text
+    borderRadius: '100%', // Round the logo itself
+    marginRight: '', // Spacing between logo and text
   };
 
   const textStyle = {
@@ -36,7 +36,7 @@ const StickyWhatsAppButton = ({ phoneNumber, message }) => {
   return (
     <a href={url} target="_blank" rel="noopener noreferrer" style={buttonStyle}>
       <Image src={logo} alt="WhatsApp Logo" style={logoStyle} width={90} height={90} />
-      <span style={textStyle}>How can I help you?</span>
+      <span style={textStyle}></span>
     </a>
   );
 };

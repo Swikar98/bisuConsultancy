@@ -8,20 +8,20 @@ import image3 from '../../../image/about/contact.jpg';
 const items = [
     {
         src: image1,
-        title: 'Sturdy in Austrialia',
-        name: 'Name 1',
+        title: 'Sturdy in ',
+        name: 'Austrialia',
         description: 'Description 1'
     },
     {
         src: image2,
-        title: 'Title 2',
-        name: 'Name 2',
+        title: 'Sturdy in ',
+        name: 'Austrialia',
         description: 'Description 2'
     },
     {
         src: image3,
-        title: 'Title 3',
-        name: 'Name 3',
+        title: 'Sturdy in ',
+        name: 'Austrialia',
         description: 'Description 3'
     },
 ];
