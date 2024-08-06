@@ -10,10 +10,10 @@ import HeroSection from "../../component/MainHome/hero/herosection"
 export default function Home() {
   return (
     <>
-    <Slide/>
-   
-      <Choose/>
+      <Slide/>
       <HeroSection/>
+      <Choose/>
+    
       <ServicesMenu/>
     </>
   );

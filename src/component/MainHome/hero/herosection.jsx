@@ -23,7 +23,7 @@ const HeroSection = () => {
   useEffect(() => {
     anime({
       targets: '.background-element',
-      translateX: () => anime.random(-50, 50),
+      translateX: () => anime.random(-20, 50),
       translateY: () => anime.random(-50, 50),
       duration: 2000,
       easing: 'easeInOutQuad',
@@ -33,7 +33,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 h-[80vh] sm:h-[100vh] flex items-center justify-center overflow-hidden">
+    <div className="relative bg-gradient-to-r from-blue-300 via-blue-400 to-blue-500 h-screen lg:h-[60vh] flex items-center justify-center overflow-hidden">
       <div ref={backgroundRef} className="absolute inset-0"></div>
       {[...Array(20)].map((_, i) => (
         <div
@@ -45,19 +45,19 @@ const HeroSection = () => {
           }}
         ></div>
       ))}
-      <div className="relative z-10 p-2 container flex items-center justify-center bg-opacity-80 rounded-lg shadow-lg">
-        <div className="flex items-center justify-center lg:h-[40vh] h-[80vh] ">
-          <div className="px-4 sm:px-6 ">
+      <div className="relative z-10 p-4 container bg-opacity-80 rounded-lg shadow-lg">
+        <div className="flex items-center  justify-center lg:h-[50vh] h-full sm:h-full p-4">
+          <div className="px-2 container sm:px-2 ">
             <section className="p-2 rounded-xl">
-              <div className="text-center ">
-                <h2 className="text-xl  font-bold">Do You Want To Complete Your Degree Fast Through the RPL</h2>
+              <div className="text-center mb-2">
+                <h2 className="text-xl font-bold">Do You Want To Complete Your Degree Fast Through the RPL</h2>
                 <h3 className="text-lg">We Can Shape Your Vision.</h3>
               </div>
-              <div className="grid grid-cols-2 lg:grid-cols-6 md:grid-cols-3 gap-4">
+              <div className="grid grid-cols-2 container lg:grid-cols-6 md:grid-cols-3 gap-2">
                 {visaTypes.map((visaType, index) => (
                   <motion.div
                     key={index}
-                    className="hover:shadow-md hover:shadow-black/25 transition-all border-2 rounded-lg"
+                    className="hover:shadow-md  hover:shadow-black/25 transition-all border-2 rounded-lg"
                     style={{ y: yTransform }} // Apply scroll-based transform
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

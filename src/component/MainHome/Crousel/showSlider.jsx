@@ -8,7 +8,7 @@ import image3 from '../../../image/about/contact.jpg';
 const items = [
     {
         src: image1,
-        title: 'Title 1',
+        title: 'Sturdy in Austrialia',
         name: 'Name 1',
         description: 'Description 1'
     },
@@ -84,7 +84,7 @@ const Carousel = () => {
     }, []);
 
     return (
-        <div className="carousel absolute" ref={carouselRef}>
+        <div className="carousel " ref={carouselRef}>
             <div className="list" ref={listRef}>
                 {items.map((item, index) => (
                     <div key={index} className="item">
